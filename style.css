@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-color: #ffcdab;
+    font-family: cursive;
+}
+
+#header {
+    background-color: #5d5d5a;
+    border-bottom: #464644 5px solid;
+    width: 100%;
+    display: flex;
+    height: 100px;
+}
+
+#header h1 {
+    background-color: rgba( 100, 130, 100, 0.0);
+    color: #ffa45c;
+    margin: auto;
+    font-size: 2.4rem;
+}
+
+#header h1:hover {
+    color: #b47846;
+    font-size: 2.43rem;
+}
+
+#header h1:active {
+    color: #ff933a;
+}
+
+#header h1::selection {
+    background-color: none;
+}
+
+.icons, #timer {
+    position: relative;
+    background-color: #ffa45c;
+    margin: 100px auto;
+    box-shadow: 4px 4px 4px 0px #3d4140;
+    height: 500px;
+    width: 500px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons #row-1, .icons #row-2, .icons #row-3  {
+    display: flex;
+    /* flex-direction: row; */
+    height: 25%;
+    width: 97%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffa45c;
+
+}
+
+.timerbelow {
+    display: none;
+}
+
+.item{
+    background-color: #ffa45c;
+    height: 100%;
+    width: 27%;
+}
+
+
+.item img {
+    background-color: #ffa45c;
+    width: 80%;
+    height: 80%;
+    cursor: pointer;
+}
+
+.item{
+    position: relative;
+    display: inline-block;
+    display: flex; /* Make the width of box same as image */
+}
+.item :hover{
+    background-color: #5d5d5a;
+    border-radius: 50%;
+}
+
+
+.item .text{
+    background-color: rgba(101, 151, 200, 00);
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    cursor: pointer;
+
+    top: 80%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    justify-content: center;
+
+    width: 100%; /* Set the width of the positioned div */
+}
+#minsec {
+    background-color: #ffa45c;
+    color: rgb(74, 14, 172);
+    font-size: 100px;
+    font-family: 'Gudea', sans-serif; 
+}
+
+.fa-4x {
+    background-color: #ffa45c;
+    color: rgba(61,65,64, 0.8);
+    cursor: pointer;
+}
+
+.fa-4x:hover{
+    color: rgba(255,37,106, 0.5);
+
+}
+
+#buttoms {
+    margin-top: 30px;
+    background-color: #ffa45c;
+}
