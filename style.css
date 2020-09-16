@@ -128,11 +128,11 @@
 
 #footer {
     width: 100%;
-    height: 100px;
+    height: stretch;
     background-color: #5d5d5a;
-    border-radius: 12px;
     padding-top: 10px;
     text-align: center;
+    overflow: hidden;
 }
 
 #footer p, #footer p b{
@@ -148,11 +148,12 @@
 #footer section{
     background-color: rgba(101, 151, 200, 00);
 }
-#footer section i{
+#footer section a i, #footer section a{
     background-color: rgba(101, 151, 200, 00);
-    font-size: 2em;
+    color: rgb(197, 197, 197);
+    font-size: 1.5em;
     cursor: pointer;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 #footer #copy{
