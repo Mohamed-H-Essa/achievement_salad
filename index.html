@@ -11,10 +11,9 @@
 </head>
 <body>
     <div id="header" >
-
-        <h1 style="cursor: pointer;" onclick="home()" >The Achievement Salad</h1>
+        <h1 style="cursor: pointer;" onclick="home()">The Achievement Salad</h1>
     </div>
-
+    <section><hr></section>
      <div class="icons" id="icons">
         <div id="row-1">
             <div class="item" onclick="clicked(5)">
@@ -79,26 +78,27 @@
     </div>
     <div id="timer">
         <div id="clock" >
-            <p id="minsec" >not working </p>
+            <p id="minsec" >not working!!. if you saw this please contact me</p>
         </div>
         <div id="buttoms">
-            <i class="fas fa-window-close fa-4x"></i>
-            <i class="fas fa-pause-circle fa-4x"></i>
-            <i class="fas fa-play-circle fa-4x"></i>
-
+            
+            <i class="fas fa-pause-circle fa-4x" id="ps" onclick="playPause()"></i>
+            <i class="fas fa-play-circle fa-4x" id="ply" onclick="playPause()"></i>
+            <br>
+            <i class="far fa-stop-circle fa-4x" id="cncl" onclick="alarmSound.pause();"></i>
+            <i class="fas fa-home fa-4x" onclick="home();"></i>
         </div>
     </div>
 
     <div id="footer">
         <section>
-            <a href="https://www.facebook.com/muhammed.hosny.73"><i class="fab fa-facebook-square"></i></a> 
-            <a href="https://www.linkedin.com/in/muhammed-hosny-a145ba1b0/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/mhosnyessa"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.facebook.com/muhammed.hosny.73" target="_blanck"><i id="fb" class="fab fb fa-facebook-square facebook"></i></a>
+            <a href="https://www.linkedin.com/in/muhammed-hosny-a145ba1b0/" target="_blanck"><i class="fab linkedin fa-linkedin linkedin"></i></a>
+            <a href="https://github.com/mhosnyessa" target="_blanck"><i class="fab github fa-github-square git"></i></a>
         </section>
-        <p>made with js by <b>Muhammed Hosny</b> </p>
+        <p>made with vanilla js by <b>Muhammed Hosny</b></p>
         <p>idea: Ali Muhammed Ali</p>
-        
-        <p id="copy">&copy;achievement salad 2020. All Rights Reserved.</p>
+        <p id="copy" style="font-family: sans-serif;">&copy; the achievement salad 2020. All Rights Reserved.</p>
     </div>
 </body>
 </html>

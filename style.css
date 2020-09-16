@@ -8,23 +8,28 @@
 }
 
 #header {
-    background-color: #5d5d5a;
+    background-color: #5d5d5a; 
     border-bottom: #464644 5px solid;
     width: 100%;
     display: flex;
     height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
+
 
 #header h1 {
     background-color: rgba( 100, 130, 100, 0.0);
     color: #ffa45c;
-    margin: auto;
     font-size: 2.4rem;
+    /* border-bottom: #bbbba5 solid 2px; */
 }
 
 #header h1:hover {
-    color: #b47846;
+    color: #e77518;
     font-size: 2.43rem;
+    transition: color 1s;
 }
 
 #header h1:active {
@@ -49,6 +54,11 @@
     align-items: center;
 }
 
+#buttoms {
+    position: absolute;
+    top: 60%;
+}
+
 .icons #row-1, .icons #row-2, .icons #row-3  {
     display: flex;
     /* flex-direction: row; */
@@ -58,8 +68,13 @@
     align-items: center;
     justify-content: space-around;
     background-color: #ffa45c;
-
 }
+
+.icons #row-1 div, .icons #row-2 div, .icons #row-3 div  {
+    color: #464644;
+    font-size: x-large;
+}
+
 
 .timerbelow {
     display: none;
@@ -104,22 +119,41 @@
     width: 100%; /* Set the width of the positioned div */
 }
 #minsec {
+    margin-bottom: 30px;
+    top: 20px;
+    width: auto;
+    left: 26%;
     background-color: #ffa45c;
     color: rgb(74, 14, 172);
     font-size: 100px;
     font-family: 'Gudea', sans-serif; 
 }
 
+#clock{
+    background-color:  #ffa45c;
+    margin-top: 0px;
+}
+
 .fa-4x {
     background-color: #ffa45c;
-    color: rgba(61,65,64, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
+    transition: color 0.5s ease-out;
 }
 
 .fa-4x:hover{
-    color: rgba(255,37,106, 0.5);
-
+    color: rgb(255, 0, 81);
+    transition: color 0.5s ease-out;
 }
+
+
+
+#buttoms{
+    display: flex;
+    flex-flow: column;
+}
+
+
 
 #buttoms {
     margin-top: 30px;
@@ -129,7 +163,7 @@
 #footer {
     width: 100%;
     height: stretch;
-    background-color: #5d5d5a;
+    background-color: #2f2f2c;
     padding-top: 10px;
     text-align: center;
     overflow: hidden;
@@ -146,14 +180,29 @@
 }
 
 #footer section{
-    background-color: rgba(101, 151, 200, 00);
+    background-color: rgba(123, 168, 214, 0);
 }
 #footer section a i, #footer section a{
     background-color: rgba(101, 151, 200, 00);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 175, 175);
     font-size: 1.5em;
     cursor: pointer;
     margin-right: 10px;
+}
+
+#footer section a .facebook:hover, #footer section a{
+    color: #3b5998;
+    transition: color 0.5s;
+}
+
+#footer section a .linkedin:hover, #footer section a{
+    color: #0e76a8;
+    transition: color 0.5s;
+}
+
+#footer section a .github:hover, #footer section a{
+    color: #FFFFFF;
+    transition: color 0.5s;
 }
 
 #footer #copy{
