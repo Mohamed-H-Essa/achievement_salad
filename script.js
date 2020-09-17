@@ -14,28 +14,33 @@ var psButtom   = document.getElementById("ps");
 var cnclButtom = document.getElementById("cncl");
 var minutes    = 1;
 var seconds    = 0;
+var currentSession = 0;
 var excution;
 var recursion;
 var clockSound = new Audio('https://kevan.org/mp3s/pomodoro%20timer.mp3');
 var alarmSound = new Audio('./sound/alarm1.wav')
 alarmSound.volume = 0.05;
+cnclButtom.style.display = "none";
 
+console.log(cnclButtom.style.display);
 
 //functions 
 function playPause(){
-    if(psButtom.style.display == "block"){
+    if(cnclButtom.style.display == "none"){
+        if(psButtom.style.display == "block"){
         clockSound.pause();
         excution = false;
         plyButtom.style.display = "block";
         psButtom.style.display = "none";
         clearTimeout(recursion);
-    }else{
+        }else{
         clockSound.play();
         excution = true;
         plyButtom.style.display = "none";
         psButtom.style.display = "block";
         startTimer();
-    }
+        }
+    }else{return;}
 }
 
 
@@ -55,6 +60,7 @@ function home(){
 }
 
 function clicked(min) {
+    currentSession = min;
     seconds = 0;
     psButtom.style.display = "block";
     plyButtom.style.display = "none";
@@ -89,6 +95,37 @@ function startTimer(){
             psButtom.style.display = "none";
             cnclButtom.style.display = "block";
         }, 1000);
+        setTimeout(()=> {switch(currentSession){
+            case 5:
+                console.log("5 min sessoin has just ended");
+                break;
+            case 10:
+                console.log("10 min session has just ended");
+                break;
+            case 15:
+                console.log("15 min session has just ended up");
+                break;
+            case 20:
+                console.log("20 min session has just ended");
+                break;
+            case 25:
+                console.log("25 min session has just ended");
+                break;
+            case 30:
+                console.log("30");
+                break;
+            case 40:
+                console.log("40")
+                break;
+            case 50:
+                console.log("50");
+                break;
+            case 60:
+                console.log("60");
+                break;
+            default:
+                console.log("there is a problem, you shouldn't see this message")
+        }}, 1020)
         minsec.style.color = "red";
        
         return;
@@ -101,8 +138,21 @@ function startTimer(){
         seconds += 60;
     }
     if (excution === true){
-        recursion = setTimeout(startTimer, 1000);
+        recursion = setTimeout(startTimer, 1);
     }else{
         clearTimeout(recursion);
+    }
+}
+
+
+//spacebar listener to playPause and disable alarm sound...
+document.body.onkeyup = (e) =>{
+    if(e.keyCode == 32){
+        if(cnclButtom.style.display == "none"){
+            debugger;
+            playPause();
+        }else{
+            alarmSound.pause();
+        }
     }
 }
