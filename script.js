@@ -138,7 +138,7 @@ function startTimer(){
         seconds += 60;
     }
     if (excution === true){
-        recursion = setTimeout(startTimer, 1);
+        recursion = setTimeout(startTimer, 1000);
     }else{
         clearTimeout(recursion);
     }
